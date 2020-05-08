@@ -1,4 +1,4 @@
 import os
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or str(os.urandom(24))
+    SECRET_KEY = os.environ.get('SECRET_KEY') or os.urandom(24).hex()
